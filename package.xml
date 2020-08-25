@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+    <name>smart_recovery</name>
+    <version>0.1.0</version>
+    <description>
+
+        This package provides a recovery behavior for the navigation stack that attempts to relieve the plight of the robot.
+
+    </description>
+    <author>An chuanxu</author>
+    <author>chuanxu@iscas.ac.cn</author>
+    <maintainer email="chuanxu@iscas.ac.cn">David V. Lu!!</maintainer>
+    <license>BSD</license>
+    <url>http://xxxxxxx/smart_recovery</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <build_depend>angles</build_depend>
+    <build_depend>base_local_planner</build_depend>
+    <build_depend>cmake_modules</build_depend>
+
+    <depend>costmap_2d</depend>
+    <depend>eigen</depend>
+    <depend>geometry_msgs</depend>
+    <depend>nav_core</depend>
+    <depend>pluginlib</depend>
+    <depend>roscpp</depend>
+    <depend>tf2</depend>
+    <depend>tf2_geometry_msgs</depend>
+    <depend>tf2_ros</depend>
+
+    <export>
+        <nav_core plugin="${prefix}/smart_plugin.xml" />
+    </export>
+
+</package>
