@@ -1,7 +1,0 @@
-<library path="lib/libsmart_recovery">
-  <class name="smart_recovery/SmartRecovery" type="smart_recovery::SmartRecovery" base_class_type="nav_core::RecoveryBehavior">
-    <description>
-      A recovery behavior that smart to relieve the plight of the robot.
-    </description>
-  </class>
-</library>

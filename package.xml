@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-    <name>smart_recovery</name>
+    <name>detect_recovery</name>
     <version>0.1.0</version>
     <description>
 
-        This package provides a recovery behavior for the navigation stack that attempts to relieve the plight of the robot.
+        This package provides a recovery behavior for the navigation stack that attempts to clear space by performing a 360 degree rotation of the robot.
 
     </description>
-    <author>An chuanxu</author>
+    <author>An Chuanxu</author>
     <author>chuanxu@iscas.ac.cn</author>
-    <maintainer email="chuanxu@iscas.ac.cn">David V. Lu!!</maintainer>
+    <maintainer email="nefu.anchuanxu@gmail.com">David V. Lu!!</maintainer>
     <license>BSD</license>
-    <url>http://xxxxxxx/smart_recovery</url>
+    <url>http://wiki.ros.org/detect_recovery</url>
 
     <buildtool_depend>catkin</buildtool_depend>
 
@@ -31,7 +31,7 @@
     <depend>tf2_ros</depend>
 
     <export>
-        <nav_core plugin="${prefix}/smart_plugin.xml" />
+        <nav_core plugin="${prefix}/detect_plugin.xml" />
     </export>
 
 </package>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(smart_recovery)
+project(detect_recovery)
 
 find_package(catkin REQUIRED
   COMPONENTS
@@ -26,7 +26,7 @@ add_definitions(${EIGEN3_DEFINITIONS})
 
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES smart_recovery
+  LIBRARIES detect_recovery
   CATKIN_DEPENDS
     costmap_2d
     geometry_msgs
@@ -37,11 +37,11 @@ catkin_package(
     tf2_ros
 )
 
-add_library(smart_recovery src/smart_recovery.cpp)
-add_dependencies(smart_recovery ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(smart_recovery ${catkin_LIBRARIES})
+add_library(detect_recovery src/detect_recovery.cpp)
+add_dependencies(detect_recovery ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(detect_recovery ${catkin_LIBRARIES})
 
-install(TARGETS smart_recovery
+install(TARGETS detect_recovery
        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
@@ -52,7 +52,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
   FILES_MATCHING PATTERN "*.h"
 )
 
-install(FILES smart_plugin.xml
+install(FILES detect_plugin.xml
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
